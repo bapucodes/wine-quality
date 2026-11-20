@@ -1,0 +1,43 @@
+name: Lab 13 - End-to-End MLOps
+# Integration test: process a genuinely new incoming batch
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 * * * *"
+
+jobs:
+  mlops-monitoring:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Run MLOps monitoring trigger
+        run: python src/mlops_pipeline/12_monitor_trigger.py
+
+      - name: Show monitoring result
+        run: |
+          if [ -f outputs/monitoring/monitor_trigger_report.json ]; then
+            cat outputs/monitoring/monitor_trigger_report.json
+          else
+            echo "Monitoring report was not generated."
+          fi
+
+      - name: Verify Kubernetes manifests
+        run: |
+          if command -v kubectl &> /dev/null; then
+            kubectl get deployment wine-quality-api || true
+            kubectl get pods || true
+          else
+            echo "kubectl not available in this runner environment."
+          fi

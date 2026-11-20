@@ -1,0 +1,33 @@
+name: Lab 13 - Self Hosted Runner Test
+
+on:
+  push:
+    branches:
+      - lab13-integration
+  workflow_dispatch:
+
+jobs:
+  test-runner:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check Python
+        run: python --version
+
+      - name: Check Git
+        run: git --version
+
+      - name: Check Docker
+        run: docker --version || echo "Docker not available"
+
+      - name: Check Kubernetes
+        run: kubectl version --client || echo "kubectl not available"
+
+      - name: Check Project
+        run: |
+          echo "Runner: $RUNNER_NAME"
+          echo "Workspace: $GITHUB_WORKSPACE"
+          ls -la

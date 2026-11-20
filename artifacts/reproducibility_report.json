@@ -1,0 +1,13 @@
+{
+    "test_name": "Wine Quality Pipeline Reproducibility Validation",
+    "parameters": {
+        "n_estimators": 100,
+        "max_depth": 10,
+        "random_state": 42,
+        "class_weight": "balanced"
+    },
+    "execution_1_f1": 0.7878787878787878,
+    "execution_2_f1": 0.7878787878787878,
+    "is_strictly_reproducible": true,
+    "status": "PASSED"
+}

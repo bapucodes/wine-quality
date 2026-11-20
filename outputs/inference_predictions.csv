@@ -1,0 +1,6 @@
+wine_id,fixed acidity,volatile acidity,citric acid,residual sugar,chlorides,free sulfur dioxide,total sulfur dioxide,density,pH,sulphates,alcohol,quality,Predicted_Good_Quality,Quality_Probability
+WINE_0683,8.5,0.46,0.31,2.25,0.078,32.0,58.0,0.998,3.33,0.54,9.8,5,0,0.0746
+WINE_1320,9.1,0.76,0.68,1.7,0.414,18.0,64.0,0.9965200000000001,2.9,1.33,9.1,6,1,0.6949
+WINE_0577,9.9,0.5,0.24,2.3,0.10300000000000001,6.0,14.0,0.9978,3.34,0.52,10.0,4,0,0.0898
+WINE_1638,12.0,0.669,0.5,1.4,0.071,6.0,26.0,0.9979100000000001,3.07,0.6,10.47,4,0,0.251
+WINE_0332,10.2,0.36,0.64,2.9,0.122,10.0,41.0,0.998,3.23,0.66,12.5,6,1,0.9144

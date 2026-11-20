@@ -1,0 +1,10 @@
+{
+    "model_name": "Wine_Quality_Production_Model",
+    "model_version": "1",
+    "model_stage": "Production",
+    "run_id": "run_wine_quality_local_01",
+    "model_source": "C:/Users/bapuramana/Desktop/my project/deployment/model.pkl",
+    "model_id": "wine_quality_rf_v1",
+    "preprocessor_artifact": "preprocessing_pipeline/preprocessor.pkl",
+    "source": "Local ML Pipeline"
+}

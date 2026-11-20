@@ -1,0 +1,11 @@
+feature,type,metric,score,p_value,threshold,status
+alcohol,numerical,KS,0.596341,0.0,0.1,DRIFT
+volatile acidity,numerical,KS,0.277237,0.0,0.1,DRIFT
+sulphates,numerical,KS,0.353684,0.0,0.1,DRIFT
+citric acid,numerical,KS,0.049433,0.494068,0.1,OK
+residual sugar,numerical,KS,0.036027,0.852649,0.1,OK
+fixed acidity,numerical,KS,0.045682,0.596124,0.1,OK
+pH,numerical,KS,0.044032,0.640715,0.1,OK
+density,numerical,KS,0.029195,0.967062,0.1,OK
+chlorides,numerical,KS,0.046278,0.579797,0.1,OK
+total sulfur dioxide,numerical,KS,0.027695,0.979691,0.1,OK

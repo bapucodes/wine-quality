@@ -1,0 +1,8 @@
+{
+  "status": "already_ingested",
+  "ingestion_performed": false,
+  "new_data_hash": "ebdfc20206d3916aed52fc3c83aef3f41317128d07959065213c6abbe4360327",
+  "timestamp": "2026-11-19T18:48:12.117623+00:00",
+  "current_rows": 1649,
+  "new_rows": 50
+}

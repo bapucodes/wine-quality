@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wine-quality-api
+  labels:
+    app: wine-quality-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wine-quality-api
+  template:
+    metadata:
+      labels:
+        app: wine-quality-api
+    spec:
+      containers:
+        - name: wine-quality-api
+          image: wine-quality-api:1.0
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8000

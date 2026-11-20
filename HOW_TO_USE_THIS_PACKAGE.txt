@@ -1,0 +1,30 @@
+RED WINE QUALITY PREDICTION MLOPS - REBUILD AND USAGE GUIDE
+
+This package contains the complete, production-grade MLOps system for predicting Red Wine Quality from physicochemical features.
+
+HOW TO RUN THE PROJECT:
+1. Review PROJECT_STRUCTURE.txt to understand the modular layout.
+2. Install the necessary dependencies:
+   python -m pip install -r requirements.txt
+3. Run the complete end-to-end MLOps pipeline:
+   python src/mlops_pipeline/wine_quality_pipeline.py --force
+4. Execute the automated test suite:
+   python -m pytest tests/test_api.py tests/test_performance.py -v
+5. Run the drift detection and retraining trigger:
+   python src/mlops_pipeline/12_drift_analysis.py
+   python src/mlops_pipeline/12_monitor_trigger.py
+6. Start the FastAPI inference service:
+   python -m uvicorn api.main:app --host 0.0.0.0 --port 8000
+   # or simply:
+   python run_api.py
+   Explore interactive documentation at http://localhost:8000/docs
+
+KEY CAPABILITIES INCLUDED:
+- Data Lineage & Schema Validation (Pandera & SHA-256)
+- Model Training & Registry (Random Forest baseline, recall quality gate >= 0.70)
+- Automated Model Lifecycle Manager & Promotion
+- Deployment Packaging & Serving with FastAPI
+- 5 Failure Injection Scenarios x 3 Repetitions (100% Pass)
+- Multi-modal Drift Monitoring (Data, Prediction, Concept)
+- Docker & Kubernetes Orchestration Manifests
+- CI/CD Automation Workflows

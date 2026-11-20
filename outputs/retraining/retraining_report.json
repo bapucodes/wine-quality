@@ -1,0 +1,14 @@
+{
+    "stage": "Retraining V2",
+    "model_version": "v2",
+    "training_samples": 1519,
+    "metrics": {
+        "accuracy": 0.48484848484848486,
+        "precision": 0.875,
+        "recall": 0.03977272727272727,
+        "f1_score": 0.07608695652173914,
+        "roc_auc": 0.7347623966942148
+    },
+    "model_path": "models/retrained_model_v2.pkl",
+    "preprocessor_path": "models/retrained_preprocessor_v2.pkl"
+}

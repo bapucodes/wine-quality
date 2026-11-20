@@ -1,0 +1,19 @@
+{
+    "model_name": "Wine_Quality_Production_Model",
+    "model_type": "RandomForestClassifier",
+    "run_id": "run_wine_quality_local_01",
+    "parameters": {
+        "n_estimators": 150,
+        "max_depth": 12,
+        "random_state": 42,
+        "class_weight": "balanced"
+    },
+    "metrics": {
+        "accuracy": 0.7879,
+        "precision": 0.8232,
+        "recall": 0.767,
+        "f1_score": 0.7941,
+        "roc_auc": 0.8892
+    },
+    "model_path": "models/wine_quality_model.pkl"
+}

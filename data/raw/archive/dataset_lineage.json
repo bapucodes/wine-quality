@@ -1,0 +1,42 @@
+[
+  {
+    "dataset_version": "v01",
+    "archive_file": "data/raw/archive/winequality_v01.csv",
+    "source_file": "data/raw/winequality.csv",
+    "new_data_hash": "a8abeff9fcbd6ecd43d2de38bf27c6765e65926f62ef2afee2434d1c41ac0e45",
+    "previous_rows": 0,
+    "new_rows": 1500,
+    "current_rows": 1500,
+    "timestamp": "2026-11-19T18:07:41.679083+00:00"
+  },
+  {
+    "dataset_version": "v02",
+    "archive_file": "data/raw/archive/winequality_v02.csv",
+    "source_file": "data/raw/winequality.csv",
+    "new_data_hash": "6aef66efcacbcda7e126b00c15ca3e088fa9f3de94ca6bb802884a6d68cf0917",
+    "previous_rows": 1500,
+    "new_rows": 50,
+    "current_rows": 1550,
+    "timestamp": "2026-11-19T18:07:41.680085+00:00"
+  },
+  {
+    "dataset_version": "v03",
+    "archive_file": "data/raw/archive/winequality_v03.csv",
+    "source_file": "data/raw/winequality.csv",
+    "new_data_hash": "45ce7e4e128f23fa2beb9e72ac934147de7c36a299e5f083986f1998dbf454d1",
+    "previous_rows": 1550,
+    "new_rows": 49,
+    "current_rows": 1599,
+    "timestamp": "2026-11-19T18:07:41.680085+00:00"
+  },
+  {
+    "dataset_version": "v05",
+    "archive_file": "data/raw/archive/winequality_v04.csv",
+    "source_file": "data/raw/new_winequality.csv",
+    "new_data_hash": "ebdfc20206d3916aed52fc3c83aef3f41317128d07959065213c6abbe4360327",
+    "previous_rows": 1599,
+    "new_rows": 50,
+    "current_rows": 1649,
+    "timestamp": "2026-11-19T18:18:03.004385+00:00"
+  }
+]

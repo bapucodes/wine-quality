@@ -1,0 +1,28 @@
+{
+    "lab": "Lab 10 - ML Model Serving and API Engineering using FastAPI",
+    "test_suite": "Performance and Reliability Testing - Wine Quality",
+    "total_tests": 5,
+    "passed": 5,
+    "failed": 0,
+    "status": "PASSED",
+    "metrics": {
+        "single_request_latency_ms": 12.45,
+        "repeated_requests": 20,
+        "average_latency_ms": 9.86,
+        "median_latency_ms": 9.21,
+        "minimum_latency_ms": 7.15,
+        "maximum_latency_ms": 15.30,
+        "reliability_requests": 30,
+        "successful_requests": 30,
+        "success_rate_percent": 100.0,
+        "batch_size": 20,
+        "batch_latency_ms": 14.82,
+        "throughput_requests_per_second": 101.42,
+        "prediction_consistency": true
+    },
+    "execution": {
+        "command": "python -m pytest tests/test_performance.py -v",
+        "result": "5 passed"
+    },
+    "measurement_context": "Measurements were obtained using Starlette TestClient in the local development environment."
+}

@@ -1,0 +1,66 @@
+LAB 11 — DOCKER + KUBERNETES REFERENCE NOTES
+Project: wine-quality-mlops
+Current stage: 11.14 — Kubernetes Service & Exposure
+
+============================================================
+LAB 11 ROADMAP
+============================================================
+
+11.1 Containerization Architecture COMPLETE
+11.2 Prepare Project for Docker COMPLETE
+11.3 Create Dockerfile COMPLETE
+11.4 Create .dockerignore COMPLETE
+11.5 Build Docker Image COMPLETE
+11.6 Run FastAPI Inside Docker COMPLETE
+11.7 Containerized API Validation COMPLETE
+11.8 Local vs Container Prediction Consistency COMPLETE
+11.9 Dependency Isolation/Reproducibility COMPLETE
+11.10 Deployment Failure Simulation COMPLETE
+11.11 Failure Debugging COMPLETE
+11.12 Deployment Recovery COMPLETE
+11.13 Kubernetes Deployment COMPLETE
+11.14 Kubernetes Service & Exposure COMPLETE
+11.15 Kubernetes Scaling COMPLETE
+11.16 Kubernetes Service Interruption COMPLETE
+11.17 Kubernetes Recovery Validation COMPLETE
+11.18 Containerization Report COMPLETE
+11.19 Deployment/Debugging Report COMPLETE
+11.20 Final Lab 11 Validation COMPLETE
+
+============================================================
+DEPLOYMENT ARCHITECTURE
+============================================================
+
+Model Registry
+  ↓
+Production Model Version
+  ↓
+Run ID
+  ↓
+Matching model + preprocessor
+  ↓
+Deployment Bundle (deployment/)
+  ├── model.pkl
+  ├── preprocessor.pkl
+  └── model_metadata.json
+  ↓
+Docker Image: wine-quality-api:1.0
+  ↓
+Kubernetes Pod (Deployment + NodePort Service :8000)
+  ↓
+FastAPI Serving (/health, /metadata, /predict, /predict/batch)
+
+============================================================
+PRODUCTION MODEL METADATA
+============================================================
+
+Model: Wine_Quality_Production_Model
+Production version: 1
+Stage: Production
+Run ID: run_wine_quality_local_01
+Model ID: wine_quality_rf_v1
+Target: Quality >= 6 (Good Quality)
+Gate Metric: Recall >= 0.70 (Achieved: 0.7670)
+ROC-AUC: 0.8892
+Latency: 9.86 ms
+Reliability: 100%

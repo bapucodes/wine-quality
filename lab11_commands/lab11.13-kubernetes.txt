@@ -1,0 +1,50 @@
+(venv) PS C:\Users\bapuramana\Desktop\my project> kubectl cluster-info
+Kubernetes control plane is running at https://127.0.0.1:53353
+CoreDNS is running at https://127.0.0.1:53353/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+
+To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+(venv) PS C:\Users\bapuramana\Desktop\my project> kubectl get nodes
+NAME                    STATUS   ROLES           AGE   VERSION
+desktop-control-plane   Ready    control-plane   62s   v1.36.1
+(venv) PS C:\Users\bapuramana\Desktop\my project> mkdir k8s
+
+
+    Directory: C:\Users\bapuramana\Desktop\my project
+
+
+Mode                 LastWriteTime         Length Name                                                        
+----                 -------------         ------ ----                                                        
+d-----        25-09-2026     18:52                k8s                                                         
+
+
+(venv) PS C:\Users\bapuramana\Desktop\my project> kubectl apply -f k8s/deployment.yaml
+deployment.apps/wine-quality-api created
+(venv) PS C:\Users\bapuramana\Desktop\my project> kubectl get deployments
+NAME               READY   UP-TO-DATE   AVAILABLE   AGE
+wine-quality-api   1/1     1            1           15s
+(venv) PS C:\Users\bapuramana\Desktop\my project> kubectl get pods
+NAME                                READY   STATUS    RESTARTS   AGE
+wine-quality-api-84f5fcd955-kdj9j   1/1     Running   0          29s
+(venv) PS C:\Users\bapuramana\Desktop\my project> kubectl describe deployment wine-quality-api
+Name:                   wine-quality-api
+Namespace:              default
+CreationTimestamp:      Fri, 25 Sep 2026 18:55:12 +0530
+Labels:                 app=wine-quality-api
+Annotations:            deployment.kubernetes.io/revision: 1
+Selector:               app=wine-quality-api
+Replicas:               1 desired | 1 updated | 1 total | 1 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=wine-quality-api
+  Containers:
+   wine-quality-api:
+    Image:         wine-quality-api:1.0
+    Port:          8000/TCP
+    Host Port:     0/TCP
+    Environment:   <none>
+    Mounts:        <none>
+  Volumes:         <none>
+  Node-Selectors:  <none>
+  Tolerations:     <none>
